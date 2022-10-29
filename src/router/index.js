@@ -1,9 +1,10 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Dashboard from "../views/LandingPage.vue";
-import Team from "../views/Projects.vue"
 import LandingPage from "@/views/LandingPage.vue";
-import Login from "@/views/auth/Login.vue";
+import LoginAuth from "@/views/auth/Login.vue";
+import Signup from "@/views/auth/signup";
+
 
 
 Vue.use(VueRouter);
@@ -22,14 +23,14 @@ const routes = [
   },
   {
     path: '/login',
-    name: 'login',
-    component: () => import('../views/auth/Login.vue')
+    name: "Login",
+    component: LoginAuth
   },
 
   {
     path: '/signup',
-    name: 'signup',
-    component: () => import('../views/auth/signup.vue')
+    name: 'SignUp',
+    component: Signup
   },
 
 ];
